@@ -6,7 +6,7 @@ import Tasks from './components/Tasks.vue';
 
 <template>
   <div class="container">
-    <h1 class="my-4 text-center">Lista de Tareas</h1>
+    <h1 class="my-4 text-center">Lista de Tareas semana del 1/7</h1>
     <div class="row mb-4">
       <div class="col-12 col-md-6 mb-2" v-for="day in days" :key="day">
         <button type="button" class="btn btn-primary btn-block" @click="selectDay(day)">
