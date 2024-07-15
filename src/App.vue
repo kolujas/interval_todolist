@@ -6,23 +6,18 @@ import Tasks from './components/Tasks.vue';
 
 <template>
   <div class="container">
-    <h1 class="my-4 text-center">Lista de Tareas semana del 1/7</h1>
+    <h1 class="my-4 text-center">Lista de tareas semana del 15/7</h1>
     <div class="row mb-4 justify-content-center">
       <div class="col-12 col-md-6 d-flex flex-column flex-md-row flex-wrap justify-content-center">
-        <button
-          type="button"
-          class="btn btn-primary btn-block m-md-2 px-3"
-          @click="selectDay(day)"
-          v-for="day in days"
-          :key="day"
-        >
+        <button type="button" class="btn btn-primary btn-block m-md-2 px-3" @click="selectDay(day)" v-for="day in days"
+          :key="day">
           {{ day }}
         </button>
       </div>
     </div>
     <div class="row" v-if="selectedDay">
       <div class="col-12">
-        <h2 class="my-4">Tareas para {{ selectedDay }}</h2>
+        <h2 class="my-4">Tareas del {{ selectedDay }}</h2>
       </div>
       <div class="col-12 col-lg-4 mb-4" v-for="(tasks, sede) in tasksBySede[selectedDay]" :key="sede">
         <div class="list-group">
@@ -44,64 +39,64 @@ const days = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado']
 // Ejemplo de tareas por día y sede
 const tasksBySede = {
   Lunes: {
-    General: ['✅ Pasar autorespuestas actualizadas', '✅ Reunión con Damian sobre agendar llamada con META', '✅  Se programó una llamada con META para el día 10/7 a las 10:30 HS', '✅ Revisar métricas de cada sede', '✅ Revisar solicitudes del grupo de bolsa de trabajo', '✅ Proponer en el grupo de Marketing una renión con una agencia que sean META Partners, para intentar evitar impuestos del 20% al 30%', ],
-    Lomas: ['ℹ️ No hay tareas nuevas'],
-    Ramos: ['✅ Se modificó un error del copy del taller de Entrenamiento funcional'],
+    General: ['✅ Pasar autorespuestas actualizadas (Lomas, Ramos, Quilmes, CABA, La Plata y Online)', '✅ Revisar solicitudes del grupo de bolsa laboral', '✅ Publicar nuevas oportunidades laborales en el grupo de bolsa de trabajo', '✅ Subir banner de 2X1 a la home de la web', '✅ Revisar las métricas de todas las cuentas publicitarias menos la de Quilmes (no tengo el acceso)', '✅ Reunion con el equipo de Marketing 13:30 la sede de Lomas'],
+    Lomas: ['✅ Hacer campaña de Fitness Dance'],
+    Ramos: ['ℹ️ No hay tareas nuevas'],
     Quilmes: ['ℹ️ No hay tareas nuevas'],
-    CABA: ['✅ A CABA le estan llegando mensaje del interior en las campañas de los talleres, los revisé y esta bien segmentado, pero volvi a poner el radio a ver si se soluciona', '✅ Si siguen cayendo mensajes en CABA del interior voy a hablar con META para saber que pasa'],
+    CABA: ['ℹ️ No hay tareas nuevas'],
     'La Plata': ['ℹ️ No hay tareas nuevas'],
     'San Martín': ['ℹ️ No hay tareas nuevas'],
     Online: ['ℹ️ No hay tareas nuevas']
   },
   Martes: {
-    General: ['✅ Completar formulario de Google Ads para contactarnos con ellos, nos van a contactar por el mail de bitrix de marketing', '✅ Subir publicacion a las redes', '✅ Actualizar autorespuestas de la página (Lomas, Ramos, Quilmes y Online)'],
-    Lomas: ['✅ Pasarle costo de las campañas a Evelyn'],
-    Ramos: ['ℹ️ No hay tareas nuevas'],
-    Quilmes: ['✅ Levantar taller gratuito de Funcional hasta el viernes 5/7 con un reajuste del copy con un presupuesto de $ 6500', '✅ Se agrego tarjeta de crédito y se reemplazo por la anterior que había vencido'],
-    CABA: ['✅ Silvina me mencionó nuevamente el problema de las consultas del interior, le sugerí agregar por barrio y no por radio, me dio el ok y los lugares a agregar', '✅ Se agregaron las suguientes ubicaciones para los talleres de CABA: Almagro, Balvanera, Caballito,Chacarita, Congreso, Parque Patricios, San Cristóbal'],
-    'La Plata': ['ℹ️ No hay tareas nuevas'],
-    'San Martín': ['✅ Pasarle a Mirella la geolocalización de la campaña de los talleres','✅ Excluir Ciudadela de la campaña de los talleres'],
-    Online: ['ℹ️ Los cursos Online arrancan la semana que viene por lo que no se sube ninguna clase a Vimeo'],
+    General: ['✅ '],
+    Lomas: ['✅ '],
+    Ramos: ['✅ '],
+    Quilmes: ['✅ '],
+    CABA: ['✅ '],
+    'La Plata': ['✅ '],
+    'San Martín': ['✅ '],
+    Online: ['✅ ']
   },
   Miércoles: {
-    General: ['ℹ️ No hay tareas nuevas'],
-    Lomas: ['ℹ️ No hay tareas nuevas'],
-    Ramos: ['ℹ️ No hay tareas nuevas'],
-    Quilmes: ['ℹ️ No hay tareas nuevas'],
-    CABA: ['ℹ️ No hay tareas nuevas'],
-    'La Plata': ['ℹ️ No hay tareas nuevas'],
-    'San Martín': ['ℹ️ No hay tareas nuevas'],
-    Online: ['ℹ️ No hay tareas nuevas'],
+    General: ['✅ '],
+    Lomas: ['✅ '],
+    Ramos: ['✅ '],
+    Quilmes: ['✅ '],
+    CABA: ['✅ '],
+    'La Plata': ['✅ '],
+    'San Martín': ['✅ '],
+    Online: ['✅ ']
   },
   Jueves: {
-    General: ['ℹ️ No hay tareas nuevas'],
-    Lomas: ['ℹ️ No hay tareas nuevas'],
-    Ramos: ['ℹ️ No hay tareas nuevas'],
-    Quilmes: ['ℹ️ No hay tareas nuevas'],
-    CABA: ['ℹ️ No hay tareas nuevas'],
-    'La Plata': ['ℹ️ No hay tareas nuevas'],
-    'San Martín': ['ℹ️ No hay tareas nuevas'],
-    Online: ['ℹ️ No hay tareas nuevas'],
+    General: ['✅ '],
+    Lomas: ['✅ '],
+    Ramos: ['✅ '],
+    Quilmes: ['✅ '],
+    CABA: ['✅ '],
+    'La Plata': ['✅ '],
+    'San Martín': ['✅ '],
+    Online: ['✅ ']
   },
   Viernes: {
-    General: ['ℹ️ No hay tareas nuevas'],
-    Lomas: ['ℹ️ No hay tareas nuevas'],
-    Ramos: ['ℹ️ No hay tareas nuevas'],
-    Quilmes: ['ℹ️ No hay tareas nuevas'],
-    CABA: ['ℹ️ No hay tareas nuevas'],
-    'La Plata': ['ℹ️ No hay tareas nuevas'],
-    'San Martín': ['ℹ️ No hay tareas nuevas'],
-    Online: ['ℹ️ No hay tareas nuevas'],
+    General: ['✅ '],
+    Lomas: ['✅ '],
+    Ramos: ['✅ '],
+    Quilmes: ['✅ '],
+    CABA: ['✅ '],
+    'La Plata': ['✅ '],
+    'San Martín': ['✅ '],
+    Online: ['✅ ']
   },
   Sábado: {
-    General: ['ℹ️ No hay tareas nuevas'],
+    General: ['✅ Compartirle a Irina un video sobre como darnos acceso de administrador en la cuenta de Quilmes', '✅ Programar historias para el domingo a las 12:00', '✅ Pasar autorespuestas actualizadas (Lomas, Quilmes, CABA, La Plata y Online)', '✅ Revisar saldo de Google Ads', '✅ Detectar problema de gestión de cuentas comerciales de Ramos y hablar con Irina al respecto, el Lunes continuo con el caso con soporte'],
     Lomas: ['ℹ️ No hay tareas nuevas'],
-    Ramos: ['ℹ️ No hay tareas nuevas'],
+    Ramos: ['✅ Hacer campaña de Personal Trainer'],
     Quilmes: ['ℹ️ No hay tareas nuevas'],
     CABA: ['ℹ️ No hay tareas nuevas'],
     'La Plata': ['ℹ️ No hay tareas nuevas'],
     'San Martín': ['ℹ️ No hay tareas nuevas'],
-    Online: ['ℹ️ No hay tareas nuevas'],
+    Online: ['ℹ️ No hay tareas nuevas']
   }
 }
 
@@ -132,7 +127,3 @@ function selectDay(day) {
   }
 }
 </style>
-
-
-
-
